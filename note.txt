@@ -25,3 +25,6 @@ Tableau：學習中
 Power BI
 VS_code
 Git
+
+
+https://rindou0120.github.io/resume_website/
