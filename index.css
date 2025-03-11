@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 60px; /* 這樣就能為 nav 留出空間，避免覆蓋頁面內容 */
+    height: 100%;
+    background: url('img/background-2.png') no-repeat center center fixed;
+    background-size: cover; /* 背景圖片覆蓋整個頁面 */
+}/*
+.container {
+    display: flex;
+    gap: 10px;
+}*/
+/* 頁首樣式 */
+header {
+    color: white;
+    text-align: center;
+}
+/* 頂部包含LOGO與導航列的區域 */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;          /* 從左邊開始 */
+    width: 100%;      /* 佔滿整個寬度 */
+    background-color: #333;  /* 背景顏色 */
+    color: white;     /* 文字顏色 */
+    z-index: 1000;    /* 確保在其他元素之上 */
+}
+/* LOGO部分 */
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+/* 導航列樣式 */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; /* 使導航項目向右對齊 */
+}
+nav a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 200;
+}
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+    text-decoration: underline;
+    border-radius: 8px;
+}
+/* 頁腳樣式 */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+
+}
+.box {
+    opacity: 0; /* 預設隱藏 */
+    transform: translateX(-100px); /* 向左移動 100px */
+    transition: all 1.2s ease-in-out;
+}
+.show {
+    opacity: 1; /* 變成可見 */
+    transform: translateX(0); /* 回到原始位置 */
+}
+
+/* home-section 樣式 */
+.s2 {
+    height: 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 80px 0 70px 0 ;
+    padding: 0 10px 0 10px;
+}
+.show {
+    opacity: 1; /* 顯示 */
+    transform: translateX(0); /* 回到原本位置 */
+}
+.ss1 {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.815);
+    box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+.ss1 h1{
+    text-align: left;
+    font-size: 60px;
+    margin: 160px 0 0 50px;
+    text-shadow: 1.6px 2.3px #afafaf;
+}
+.ss1 p{
+    text-align: left;
+    font-size: 45px;
+    margin: 50px 0 0 55px;
+    text-shadow: 1.3px 2.2px #afafaf;
+}
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem !important;
+    margin-top: 1.7rem !important;
+    justify-content: center;
+}
+
+.social a {
+    color: #ffcc7f;
+    font-size: 1.5rem !important;
+    border: 2.5px solid #ffcc7f;
+    border-radius: 50%;
+    padding: .30rem;
+    text-align: center;
+    width: 70px !important;
+
+}
+
+.social a:hover {
+    color: #ffcc7f;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px #ffcc7f;
+    transition: all .3s ease-in-out;
+}
+.ss2 {
+    width: 30%;
+    height: 100%;
+    margin-left: 300px;
+    padding: 0 60px 0 70px;
+    /*display: none;  初始隱藏 */
+    z-index: 1;
+    border-radius: 180px;
+  }
+/* 當視窗縮小時，隱藏 ss2 */
+@media (max-width: 1600px) {
+    .ss1 {
+        width: 100%;
+    }
+    .ss1 h1 {
+        text-align: center;
+        font-size: 80px;
+        margin:160px 0 0 42px;
+    }
+    .ss1 p{
+        text-align: center;
+        font-size: 60px;
+        margin: 50px 0 0 38px;
+    }
+    .ss2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 100%;
+        display: none;
+    }
+    .ss2 img{
+        width: 100px;
+        height: 100px;
+        display: none;
+        }
+}
+
+/* skill-section 樣式 */
+.s3 {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:200px 0 100px 0;
+    padding: 20px 50px 20px 50px;
+    overflow: hidden;
+    transition: 0.5s;
+    background-color: #ebebeb;
+}
+.ss3-1{
+    position: relative;
+    width: 25%;
+    height: 100%;
+    flex: 1;
+    filter: grayscale(1);
+    background: url('img/program.png') center ;
+    z-index: 2;
+}
+.ss3-2{
+    position: relative;
+    width: 25%;
+    height: 100%;
+    flex: 1;
+    filter: grayscale(1);
+    background: url('img/AI_pic.png') center ;
+    z-index: 2;
+}
+.ss3-3{
+    position: relative;
+    width: 25%;
+    height: 100%;
+    flex: 1;
+    filter: grayscale(1);
+    background: url('img/frame.png') center ;
+    z-index: 2;
+}
+.ss3-4{
+    position: relative;
+    width: 25%;
+    height: 100%;
+    flex: 1;
+    filter: grayscale(1);
+    background: url('img/report.png') no-repeat;
+    z-index: 2;
+}
+.ss3-1:hover,
+.ss3-2:hover,
+.ss3-3:hover,
+.ss3-4:hover {
+    filter: none;
+    flex: 3;
+    transition: 0.5s;
+    z-index: 5;
+}
+.ss3-1 .text,
+.ss3-2 .text, 
+.ss3-3 .text,
+.ss3-4 .text{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    display: none;
+}
+.ss3-1:hover .text,
+.ss3-2:hover .text,
+.ss3-3:hover .text,
+.ss3-4:hover .text{
+    display: block;
+    filter: blur(5);
+}
+
+.text h2 {
+    font-size: 30px;
+    font-weight: 800;
+    margin: 90px 0 15px 30px;
+}
+.text li {
+    position: relative;
+    font-size: 28px;
+    margin-left: 50px;
+    line-height: 100px;
+    font-weight: 600;
+}
+
+.text a {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 5px 0 10px 110px;
+}
+.text a:hover {
+    color: rgb(255, 0, 0);
+    text-decoration: underline;
+}
+/*@media (max-width: 1284px){
+
+}*/
+/*
+.ss4-1 {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(127, 208, 255);
+    z-index: 1;
+}*/
+
+/* profile-section 樣式 */
+.s4 {
+    height: 800px;
+    margin: 80px 30px 80px 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.ss5 {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    margin-right: 50px;
+    padding: 15px 50px 15px 50px ;
+    background-color: rgba(255, 255, 255, 0.959); /* 半透明背景 */
+    backdrop-filter: blur(10px); /* 模糊效果 */
+    box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #000000;
+    z-index: 1;
+}
+
+.ss6 {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    margin-right: 50px;
+    padding: 15px 50px 15px 50px ;
+    background-color: rgba(255, 255, 255, 0.959); /* 半透明背景 */
+    backdrop-filter: blur(10px); /* 模糊效果 */
+    box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #000000;
+    z-index: 1;
+}
+.ss7 {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    padding: 15px 50px 15px 50px ;
+    background-color: rgba(255, 255, 255, 0.959); /* 半透明背景 */
+    backdrop-filter: blur(10px); /* 模糊效果 */
+    box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #000000;
+    z-index: 1;
+}
+.ss5 img,
+.ss6 img, 
+.ss7 img {
+    position: relative;
+    width: 100%;
+    height: 45%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.ss5 .text,
+.ss6 .text,
+.ss7 .text {
+    position: relative;
+    height: 40%;
+    background-color: #ebebeb;
+    margin-top: 80px;
+    padding: 20px 0 0 15px;
+    line-height: 30px;
+    word-wrap: normal;
+}
+.ss5 li{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+/* about-section 樣式 */
+.s5 {
+    width: 100%;
+    height: 860px;
+    margin: 50px 0 0 0;
+    padding: 50px 50px 50px 50px ;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.897);
+}
+.ss8-1 {
+    width: 40%;
+    height: 100%;
+    border: 8px solid #9dd1c8e3;
+    border-radius: 15px;
+}
+.ss8-2 {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    padding: 50px 50px 50px 50px ;
+
+    z-index: 1;
+}
+.ss8-2 h2 {
+    padding: 15px 0 15px 0;
+}
+.ss8-2 p {
+    font-size: 32px;
+    font-weight: 800;
+    word-wrap: break-word;
+    line-height: normal;
+}

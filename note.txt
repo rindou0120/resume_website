@@ -1,0 +1,27 @@
+Program language
+
+HTML5
+CSS3 
+C#
+Python
+
+
+AI
+
+TensorFlow：學習中
+Keras：學習中
+Pytouch：學習中
+OpenCV：學習中
+
+
+DB
+
+MySQL：學習中
+
+
+Tool
+
+Tableau：學習中
+Power BI
+VS_code
+Git
