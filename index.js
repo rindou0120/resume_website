@@ -14,3 +14,7 @@ $(window).on("scroll", function() {
 $(document).ready(function() {
     $(window).trigger("scroll"); // 初次執行
 });
+
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("active");
+}

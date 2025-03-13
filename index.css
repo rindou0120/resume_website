@@ -10,7 +10,17 @@ body {
     height: 100%;
     background: url('img/background-2.png') no-repeat center center fixed;
     background-size: cover; /* 背景圖片覆蓋整個頁面 */
-}/*
+}
+.box {
+    opacity: 0; /* 預設隱藏 */
+    transform: translateX(-100px); /* 向左移動 100px */
+    transition: all 1.2s ease-in-out;
+}
+.show {
+    opacity: 1; /* 變成可見 */
+    transform: translateX(0); /* 回到原始位置 */
+}
+/*
 .container {
     display: flex;
     gap: 10px;
@@ -21,9 +31,17 @@ header {
     text-align: center;
 }
 /* 頂部包含LOGO與導航列的區域 */
+/* 漢堡選單按鈕 (預設隱藏) */
+.menu-icon {
+    font-size: 30px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
 .topbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
     padding: 10px 20px;
     background-color: #333;
@@ -37,6 +55,8 @@ header {
 }
 /* LOGO部分 */
 .logo {
+    position: absolute;
+    left: 20px;
     color: white;
     font-size: 24px;
     font-weight: bold;
@@ -61,6 +81,10 @@ nav a:hover {
     text-decoration: underline;
     border-radius: 8px;
 }
+.nav-links {
+    list-style: none;
+    display: flex;
+}
 /* 頁腳樣式 */
 footer {
     background-color: #333;
@@ -72,15 +96,7 @@ footer {
     bottom: 0;
 
 }
-.box {
-    opacity: 0; /* 預設隱藏 */
-    transform: translateX(-100px); /* 向左移動 100px */
-    transition: all 1.2s ease-in-out;
-}
-.show {
-    opacity: 1; /* 變成可見 */
-    transform: translateX(0); /* 回到原始位置 */
-}
+
 
 /* home-section 樣式 */
 .s2 {
@@ -151,6 +167,25 @@ footer {
   }
 /* 當視窗縮小時，隱藏 ss2 */
 @media (max-width: 1600px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
     .ss1 {
         width: 100%;
     }
@@ -176,10 +211,85 @@ footer {
         width: 100px;
         height: 100px;
         display: none;
-        }
+    }
+    .s3 {
+        width: 100%;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin:100px 0 50px 0;
+        padding: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        background-color: #ebebeb;
+    }
+    .ss3-1{
+        position: relative;
+        width: 50%;
+        height: 25%;
+        flex: 1;
+        filter: grayscale(1);
+        background: url('img/program.png') center ;
+        z-index: 2;
+    }
+    .ss3-2{
+        position: relative;
+        width: 50%;
+        height: 25%;
+        flex: 1;
+        filter: grayscale(1);
+        background: url('img/AI_pic.png') center ;
+        z-index: 2;
+    }
+    .ss3-3{
+        position: relative;
+        width: 50%;
+        height: 25%;
+        flex: 1;
+        filter: grayscale(1);
+        background: url('img/frame.png') center ;
+        z-index: 2;
+    }
+    .ss3-4{
+        position: relative;
+        width: 50%;
+        height: 25%;
+        flex: 1;
+        filter: grayscale(1);
+        background: url('img/report.png') no-repeat;
+        z-index: 2;
+    }
+    .ss3-1:hover,
+    .ss3-2:hover,
+    .ss3-3:hover,
+    .ss3-4:hover {
+        filter: none;
+        flex: 3;
+        transition: 0.5s;
+        z-index: 5;
+    }
+    .ss3-1 .text,
+    .ss3-2 .text, 
+    .ss3-3 .text,
+    .ss3-4 .text{
+        width: 50%;
+        height: 25%;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        display: none;
+    }
+    .ss3-1:hover .text,
+    .ss3-2:hover .text,
+    .ss3-3:hover .text,
+    .ss3-4:hover .text{
+        display: block;
+        filter: blur(5);
+}
 }
 
-/* skill-section 樣式 */
+/*skill-section 樣式 */
 .s3 {
     width: 100%;
     height: 800px;
@@ -278,17 +388,6 @@ footer {
     color: rgb(255, 0, 0);
     text-decoration: underline;
 }
-/*@media (max-width: 1284px){
-
-}*/
-/*
-.ss4-1 {
-    position: relative;
-    width: 50%;
-    height: 100%;
-    background-color: rgb(127, 208, 255);
-    z-index: 1;
-}*/
 
 /* profile-section 樣式 */
 .s4 {

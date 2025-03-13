@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 20px;
+    position: relative;
+}
+
+/* LOGO 樣式 */
+.logo img {
+    height: 50px; /* 設定 LOGO 高度，可依需求調整 */
+}
+
+/* 導覽列樣式 */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* 漢堡選單按鈕 (預設隱藏) */
+.menu-icon {
+    font-size: 30px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+/* 當螢幕小於 1600px 時，導覽列變成展開式清單 */
+@media (max-width: 1600px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 15px;
+    }
+}
