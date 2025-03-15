@@ -373,8 +373,9 @@ footer {
     word-wrap: break-word;
     line-height: normal;
 }
-/* 當視窗縮小時，隱藏 ss2 */
+/* 當視窗縮小時 */
 @media (max-width: 1600px) {
+    /* 導航列樣式 */
     .menu-icon {
         display: block;
     }
