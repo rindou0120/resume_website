@@ -353,8 +353,6 @@ footer {
 .ss8-1 {
     width: 40%;
     height: 100%;
-    border: 8px solid #9dd1c8e3;
-    border-radius: 15px;
 }
 .ss8-2 {
     position: relative;
@@ -598,24 +596,25 @@ footer {
     /* about-section 樣式 */
     .s5 {
         width: 100%;
-        height: 860px;
+        height: 1000px;
         margin: 50px 0 0 0;
         padding: 50px 50px 50px 50px ;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         background-color: rgba(255, 255, 255, 0.897);
     }
     .ss8-1 {
-        width: 40%;
-        height: 100%;
-        border: 8px solid #9dd1c8e3;
-        border-radius: 15px;
-        display: none;
+        width: auto;
+        /*height: auto;*/
+        /*display: none;*/
+        overflow: hidden;
+        object-fit: contain;
     }
+
     .ss8-2 {
         position: relative;
         width: 100%;
-        height: 100%;
+        height: 50%;
         padding: 5px 5px 5px 5px ;
 
         z-index: 1;
