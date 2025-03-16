@@ -335,11 +335,15 @@ footer {
     line-height: 30px;
     word-wrap: normal;
 }
-.ss5 li{
+.ss5 li,
+.ss6 li,
+.ss7 li{
     position: relative;
     margin: 0;
     padding: 0;
+    font-size: 20px;
 }
+
 /* about-section 樣式 */
 .s5 {
     width: 100%;
@@ -588,10 +592,13 @@ footer {
         line-height: 30px;
         word-wrap: normal;
     }
-    .ss5 li{
+    .ss5 li,
+    .ss6 li,
+    .ss7 li{
         position: relative;
         margin: 0;
         padding: 0;
+        font-size: 16px;
     }
     /* about-section 樣式 */
     .s5 {
