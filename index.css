@@ -264,7 +264,10 @@ footer {
     color: rgb(255, 0, 0);
     text-decoration: underline;
 }
-
+/* skill-section-2 樣式 */
+.s3-1 {
+    display: none;
+}
 /* profile-section 樣式 */
 .s4 {
     height: 800px;
@@ -402,13 +405,13 @@ footer {
     }
     .ss1 h1 {
         text-align: center;
-        font-size: 80px;
+        font-size: 60px;
         margin:160px 0 0 42px;
     }
     .ss1 p{
         text-align: center;
-        font-size: 60px;
-        margin: 50px 0 0 38px;
+        font-size: 35px;
+        margin: 50px 0 0 32px;
     }
     .ss2 {
         position: absolute;
@@ -424,100 +427,79 @@ footer {
         display: none;
     }
     .s3 {
-        width: 100%;
-        height: 800px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin:100px 0 50px 0;
-        padding: 0;
-        overflow: hidden;
-        transition: 0.5s;
-        background-color: #ebebeb;
-    }
-    .ss3-1{
-        position: relative;
-        width: 50%;
-        height: 100%;
-        flex: 1;
-        filter: grayscale(1);
-        background: url('img/program.png') center ;
-        z-index: 2;
-    }
-    .ss3-2{
-        position: relative;
-        width: 50%;
-        height: 100%;
-        flex: 1;
-        filter: grayscale(1);
-        background: url('img/AI_pic.png') center ;
-        z-index: 2;
-    }
-    .ss3-3{
-        position: relative;
-        width: 50%;
-        height: 100%;
-        flex: 1;
-        filter: grayscale(1);
-        background: url('img/frame.png') center ;
-        z-index: 2;
-    }
-    .ss3-4{
-        position: relative;
-        width: 50%;
-        height: 100%;
-        flex: 1;
-        filter: grayscale(1);
-        background: url('img/report.png') no-repeat;
-        z-index: 2;
-    }
-    .ss3-1:hover,
-    .ss3-2:hover,
-    .ss3-3:hover,
-    .ss3-4:hover {
-        filter: none;
-        flex: 8;
-        transition: 0.5s;
-        z-index: 5;
-    }
-    .ss3-1 .text,
-    .ss3-2 .text, 
-    .ss3-3 .text,
-    .ss3-4 .text{
-        width: 50%;
-        height: 100%;
-        position: absolute;
-        right: 0;
-        background-color: white;
         display: none;
-        font-size: 5px;
     }
-    .ss3-1:hover .text,
-    .ss3-2:hover .text,
-    .ss3-3:hover .text,
-    .ss3-4:hover .text{
-        display: block;
-        filter: blur(5);
+    /* skill-section-2 樣式 */
+    .s3-1 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin:200px 0 100px 0;
+        overflow: hidden;
     }
-    .text h2 {
-        font-size: 19px;
-        font-weight: 800;
-        margin: 90px 0 15px 15px;
-    }
-    .text li {
+    .ss3-1-1{
         position: relative;
-        font-size: 15px;
-        margin-left: 30px;
-        line-height: 50px;
+        width: 100%;
+        height: 25%;
+        background: url('img/program.png') center ;
+        margin: 15px 0 0 0 ;
+        z-index: 2;
+    }
+    .ss3-2-2{
+        position: relative;
+        width: 100%;
+        height: 25%;
+        background: url('img/AI_pic.png') center ;
+        margin: 15px 0 0 0 ;
+        z-index: 2;
+    }
+    .ss3-3-3{
+        position: relative;
+        width: 100%;
+        height: 25%;
+        background: url('img/frame.png') center ;
+        margin: 15px 0 0 0 ;
+        z-index: 2;
+    }
+    .ss3-4-4{
+        position: relative;
+        width: 100%;
+        height: 25%;
+        background: url('img/report.png') no-repeat;
+        margin: 15px 0 0 0 ;
+        z-index: 2;
+    }
+    .ss3-1-1 .text-1,
+    .ss3-2-2 .text-1, 
+    .ss3-3-3 .text-1,
+    .ss3-4-4 .text-1{
+        width: 100%;
+        height: 100%;
+        position:relative;
+        background-color: white;
+        margin: 10px 50px 0 200px;
+    }
+    .text-1 h2 {
+        font-size: 28px;
         font-weight: 600;
+        margin: 100px 0 15px 30px;
     }
-
-    .text a {
-        font-size: 10px;
+    .text-1 li {
+        position: relative;
+        font-size: 26px;
+        margin-left: 50px;
+        line-height: 50px;
         font-weight: 500;
-        margin: 5px 0 10px 50px;
     }
-    .text a:hover {
+    
+    .text-1 a {
+        font-size: 19px;
+        font-weight: 500;
+        margin: 5px 0 5px 50px;
+    }
+    .text-1 a:hover {
         color: rgb(255, 0, 0);
         text-decoration: underline;
     }
@@ -603,7 +585,7 @@ footer {
     /* about-section 樣式 */
     .s5 {
         width: 100%;
-        height: 1000px;
+        height: auto;
         margin: 50px 0 0 0;
         padding: 50px 50px 50px 50px ;
         display: flex;
