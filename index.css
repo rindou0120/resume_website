@@ -146,7 +146,7 @@ footer {
     border-radius: 50%;
     padding: .30rem;
     text-align: center;
-    width: 70px !important;
+    width: 100px !important;
 
 }
 
@@ -378,7 +378,7 @@ footer {
     word-wrap: break-word;
     line-height: normal;
 }
-/* 當視窗縮小時 */
+/* 當視窗縮小時 (max-width: 1600px)*/
 @media (max-width: 1600px) {
     /* 導航列樣式 */
     .menu-icon {
@@ -490,6 +490,251 @@ footer {
     .text-1 li {
         position: relative;
         font-size: 26px;
+        margin-left: 50px;
+        line-height: 50px;
+        font-weight: 500;
+    }
+    
+    .text-1 a {
+        font-size: 19px;
+        font-weight: 500;
+        margin: 5px 0 5px 50px;
+    }
+    .text-1 a:hover {
+        color: rgb(255, 0, 0);
+        text-decoration: underline;
+    }
+    /* profile-section 樣式 */
+    .s4 {
+        height: auto;
+        margin: 8px 10px 8px 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .ss5 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin: 15px 0 0 0;
+        padding: 15px 50px 15px 50px ;
+        background-color: rgba(255, 255, 255, 0.959); /* 半透明背景 */
+        backdrop-filter: blur(10px); /* 模糊效果 */
+        box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        border: 3px solid #000000;
+        z-index: 1;
+    }
+
+    .ss6 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin: 15px 0 0 0;
+        padding: 15px 50px 15px 50px ;
+        background-color: rgba(255, 255, 255, 0.959); /* 半透明背景 */
+        backdrop-filter: blur(10px); /* 模糊效果 */
+        box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        border: 3px solid #000000;
+        z-index: 1;
+    }
+    .ss7 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin: 15px 0 0 0;
+        padding: 15px 50px 15px 50px ;
+        background-color: rgba(255, 255, 255, 0.959); /* 半透明背景 */
+        backdrop-filter: blur(10px); /* 模糊效果 */
+        box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        border: 3px solid #000000;
+        z-index: 1;
+    }
+    .ss5 img,
+    .ss6 img, 
+    .ss7 img {
+        position: relative;
+        width: 100%;
+        height: 40%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    .ss5 .text,
+    .ss6 .text,
+    .ss7 .text {
+        position: relative;
+        height: 45%;
+        background-color: #ebebeb;
+        margin-top: 40px;
+        padding: 20px 0 0 15px;
+        line-height: 30px;
+        word-wrap: normal;
+    }
+    .ss5 li,
+    .ss6 li,
+    .ss7 li{
+        position: relative;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+    }
+    /* about-section 樣式 */
+    .s5 {
+        width: 100%;
+        height: auto;
+        margin: 50px 0 0 0;
+        padding: 50px 50px 50px 50px ;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.897);
+    }
+    .ss8-1 {
+        width: auto;
+        /*height: auto;*/
+        /*display: none;*/
+        overflow: hidden;
+        object-fit: contain;
+    }
+
+    .ss8-2 {
+        position: relative;
+        width: 100%;
+        height: 50%;
+        padding: 5px 5px 5px 5px ;
+
+        z-index: 1;
+    }
+    .ss8-2 h2 {
+        text-align: center;
+        padding: 15px 0 15px 0;
+    }
+    .ss8-2 p {
+        font-size: 10px;
+        font-weight: 200;
+        word-wrap: break-word;
+        line-height: normal;
+    }
+
+}
+
+/* 當視窗縮小時 (max-width: 1600px)*/
+@media (max-width: 450px) {
+    /* 導航列樣式 */
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .ss1 {
+        width: 100%;
+    }
+    .ss1 h1 {
+        text-align: center;
+        font-size: 30px;
+        margin:160px 0 0 42px;
+    }
+    .ss1 p{
+        text-align: center;
+        font-size: 16px;
+        margin: 50px 0 0 32px;
+    }
+    .ss2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 100%;
+        display: none;
+    }
+    .ss2 img{
+        width: 100px;
+        height: 100px;
+        display: none;
+    }
+    .s3 {
+        display: none;
+    }
+    /* skill-section-2 樣式 */
+    .s3-1 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin:200px 0 100px 0;
+        overflow: hidden;
+    }
+    .ss3-1-1{
+        position: relative;
+        width: 100%;
+        height: 25%;
+        background: url('img/program.png') no-repeat center;
+        margin: 10px 0 0 0 ;
+        z-index: 2;
+    }
+    .ss3-2-2{
+        position: relative;
+        width: 100%;
+        height: 25%;
+        background: url('img/AI_pic.png') no-repeat center;
+        margin: 10px 0 0 0 ;
+        z-index: 2;
+    }
+    .ss3-3-3{
+        position: relative;
+        width: 100%;
+        height: 25%;
+        background: url('img/frame.png') no-repeat center;
+        margin: 10px 0 0 0 ;
+        z-index: 2;
+    }
+    .ss3-4-4{
+        position: relative;
+        width: 100%;
+        height: 25%;
+        background: url('img/report.png') no-repeat center;
+        background-size: 100% auto;
+        margin: 10px 0 0 0 ;
+        z-index: 2;
+    }
+    .ss3-1-1 .text-1,
+    .ss3-2-2 .text-1, 
+    .ss3-3-3 .text-1,
+    .ss3-4-4 .text-1{
+        width: auto;
+        height: 100%;
+        position:relative;
+        background-color: white;
+        margin: 10px 90px 0 80px;
+    }
+    .text-1 h2 {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 50px 0 15px 15px;
+        padding-top: 8px;
+    }
+    .text-1 li {
+        position: relative;
+        font-size: 14px;
         margin-left: 50px;
         line-height: 50px;
         font-weight: 500;
