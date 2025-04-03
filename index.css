@@ -475,11 +475,11 @@ footer {
     .ss3-2-2 .text-1, 
     .ss3-3-3 .text-1,
     .ss3-4-4 .text-1{
-        width: 100%;
+        width: auto;
         height: 100%;
         position:relative;
         background-color: white;
-        margin: 10px 50px 0 200px;
+        margin: 10px 50px 0 70px;
     }
     .text-1 h2 {
         font-size: 28px;
