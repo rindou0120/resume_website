@@ -443,7 +443,7 @@ footer {
         position: relative;
         width: 100%;
         height: 25%;
-        background: url('img/program.png') center ;
+        background: url('img/program.png') no-repeat ;
         margin: 15px 0 0 0 ;
         z-index: 2;
     }
@@ -451,7 +451,7 @@ footer {
         position: relative;
         width: 100%;
         height: 25%;
-        background: url('img/AI_pic.png') center ;
+        background: url('img/AI_pic.png') no-repeat ;
         margin: 15px 0 0 0 ;
         z-index: 2;
     }
@@ -459,7 +459,7 @@ footer {
         position: relative;
         width: 100%;
         height: 25%;
-        background: url('img/frame.png') center ;
+        background: url('img/frame.png') no-repeat ;
         margin: 15px 0 0 0 ;
         z-index: 2;
     }
