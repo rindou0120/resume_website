@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding-top: 60px; /* 這樣就能為 nav 留出空間，避免覆蓋頁面內容 */
     height: 100%;
-    background: url('img/background-2.png') no-repeat center center fixed;
+    background-color: rgb(212, 239, 255);
     background-size: cover; /* 背景圖片覆蓋整個頁面 */
 }
 .box {
@@ -20,6 +20,7 @@ body {
     opacity: 1; /* 變成可見 */
     transform: translateX(0); /* 回到原始位置 */
 }
+
 /*
 .container {
     display: flex;
@@ -97,6 +98,13 @@ footer {
 
 }
 
+hr.titleline {
+    width: 900px; 
+    height: 3px; 
+    background-color: #333; 
+    border: none; 
+    margin: 30px auto;
+}
 
 /* home-section 樣式 */
 .s2 {
@@ -115,21 +123,27 @@ footer {
     position: relative;
     width: 50%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.815);
-    box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.4);
     z-index: 2;
 }
 .ss1 h1{
     text-align: left;
-    font-size: 60px;
+    font-size: 80px;
     margin: 160px 0 0 50px;
-    text-shadow: 1.6px 2.3px #afafaf;
+    text-shadow: 3.5px 1.8px #777777;
 }
 .ss1 p{
     text-align: left;
     font-size: 45px;
+    font-weight: 600;
     margin: 50px 0 0 55px;
-    text-shadow: 1.3px 2.2px #afafaf;
+    text-shadow: 3.5px 1.8px #bebebe;
+}
+.ss2 {
+    width: 50%;
+    height: 100%;
+    padding: 0 50px 0 70px;
+    z-index: 1;
+    border-radius: 180px;
 }
 .social {
     display: flex;
@@ -156,122 +170,130 @@ footer {
     box-shadow: 0 0 20px #ffcc7f;
     transition: all .3s ease-in-out;
 }
-.ss2 {
-    width: 30%;
-    height: 100%;
-    margin-left: 300px;
-    padding: 0 60px 0 70px;
-    /*display: none;  初始隱藏 */
-    z-index: 1;
-    border-radius: 180px;
-}
+
 /*skill-section 樣式 */
 .s3 {
     width: 100%;
-    height: 800px;
+    height: 700px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin:200px 0 100px 0;
-    padding: 20px 50px 20px 50px;
-    overflow: hidden;
-    transition: 0.5s;
-    background-color: #ebebeb;
+    margin:10px 0 0 0;
 }
-.ss3-1{
+.S-title {
+    width: 100%;
+    height: auto;
+    margin:180px 0 20px 0;
+}
+.S-title h1{
+    text-align: center;
+    font-size: 80px;
+    margin: 5px 0 5px 0;
+    text-shadow:12px 12px 15px rgba(0, 0, 0, 0.4) ;
+}
+.ss3-1, .ss3-2, .ss3-3, .ss3-4 {
     position: relative;
     width: 25%;
     height: 100%;
-    flex: 1;
+    margin: auto;
     filter: grayscale(1);
-    background: url('img/program.png') center ;
     z-index: 2;
+    transition: all 0.5s ease;
 }
-.ss3-2{
+.ss3-1 .text {
+    height: 100%;
     position: relative;
-    width: 25%;
-    height: 100%;
-    flex: 1;
-    filter: grayscale(1);
-    background: url('img/AI_pic.png') center ;
-    z-index: 2;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+    border-radius: 50px;
 }
-.ss3-3{
+.ss3-2 .text {
+    height: 100%;
     position: relative;
-    width: 25%;
-    height: 100%;
-    flex: 1;
-    filter: grayscale(1);
-    background: url('img/frame.png') center ;
-    z-index: 2;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+    border-radius: 50px;
 }
-.ss3-4{
+
+.ss3-3 .text{
+    height: 100%;
     position: relative;
-    width: 25%;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+    border-radius: 50px;
+}
+.ss3-4 .text {
     height: 100%;
-    flex: 1;
-    filter: grayscale(1);
-    background: url('img/report.png') no-repeat;
-    z-index: 2;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+    border-radius: 50px;
 }
-.ss3-1:hover,
-.ss3-2:hover,
-.ss3-3:hover,
-.ss3-4:hover {
-    filter: none;
-    flex: 3;
-    transition: 0.5s;
-    z-index: 5;
-}
-.ss3-1 .text,
-.ss3-2 .text, 
-.ss3-3 .text,
-.ss3-4 .text{
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    background-color: white;
-    display: none;
-}
-.ss3-1:hover .text,
-.ss3-2:hover .text,
-.ss3-3:hover .text,
-.ss3-4:hover .text{
-    display: block;
-    filter: blur(5);
+
+
+.active .text {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .text h2 {
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 800;
-    margin: 90px 0 15px 30px;
+    margin-bottom: 20px;
 }
 .text li {
-    position: relative;
-    font-size: 28px;
-    margin-left: 50px;
-    line-height: 100px;
-    font-weight: 600;
+    font-size: 26px;
+    margin-left: 20px;
+    line-height: 2.5;
 }
-
 .text a {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
-    margin: 5px 0 10px 110px;
+    margin-top: 10px;
+    display: inline-block;
 }
 .text a:hover {
-    color: rgb(255, 0, 0);
+    color: red;
     text-decoration: underline;
 }
 /* skill-section-2 樣式 */
 .s3-1 {
     display: none;
 }
+.S-title2{
+    display: none;
+}
 /* profile-section 樣式 */
+.P-title{
+    width: 100%;
+    height: auto;
+    margin:180px 0 10px 0;
+}
+.P-title h1{
+    text-align: center;
+    font-size: 80px;
+    margin: 5px 0 5px 0;
+    text-shadow:12px 12px 15px rgba(0, 0, 0, 0.4) ;
+}
 .s4 {
-    height: 800px;
-    margin: 80px 30px 80px 100px;
+    height: 600px;
+    margin: 40px 30px 80px 100px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -287,6 +309,7 @@ footer {
     box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
+    border-radius: 50px;
     border: 3px solid #000000;
     z-index: 1;
 }
@@ -302,6 +325,7 @@ footer {
     box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
+    border-radius: 50px;
     border: 3px solid #000000;
     z-index: 1;
 }
@@ -315,6 +339,7 @@ footer {
     box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
+    border-radius: 50px;
     border: 3px solid #000000;
     z-index: 1;
 }
@@ -337,6 +362,14 @@ footer {
     padding: 20px 0 0 15px;
     line-height: 30px;
     word-wrap: normal;
+    border-radius: 15px;
+}
+.ss5 h3,
+.ss6 h3,
+.ss7 h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 1px;
 }
 .ss5 li,
 .ss6 li,
@@ -348,10 +381,21 @@ footer {
 }
 
 /* about-section 樣式 */
+.A-title{
+    width: 100%;
+    height: auto;
+    margin:180px 0 10px 0;
+}
+.A-title h1{
+    text-align: center;
+    font-size: 80px;
+    margin: 5px 0 5px 0;
+    text-shadow:12px 12px 15px rgba(0, 0, 0, 0.4) ;
+}
 .s5 {
     width: 100%;
-    height: 860px;
-    margin: 50px 0 0 0;
+    height: 660px;
+    margin: 30px 0 0 0;
     padding: 50px 50px 50px 50px ;
     display: flex;
     flex-direction: row;
@@ -360,13 +404,14 @@ footer {
 .ss8-1 {
     width: 40%;
     height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
 }
 .ss8-2 {
     position: relative;
     width: 60%;
     height: 100%;
     padding: 50px 50px 50px 50px ;
-
     z-index: 1;
 }
 .ss8-2 h2 {
@@ -399,6 +444,9 @@ footer {
     .nav-links.active {
         display: flex;
     }
+    hr.titleline {
+        width: 80%; 
+    }
 
     .ss1 {
         width: 100%;
@@ -430,68 +478,72 @@ footer {
         display: none;
     }
     /* skill-section-2 樣式 */
+    .S-title {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin:90px 0 10px 0;
+    }
+    .S-title h1 {
+        text-align: center;
+        font-size: 62px;
+        margin: 5px 0 5px 0;
+        text-shadow:12px 12px 15px rgba(0, 0, 0, 0.4) ;
+    }
     .s3-1 {
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        margin:200px 0 100px 0;
+        margin:10px 0 100px 0;
         overflow: hidden;
     }
-    .ss3-1-1{
-        position: relative;
+    .ss3-1-1 .text-1{
         width: 100%;
         height: 25%;
-        background: url('img/program.png') no-repeat center;
-        margin: 15px 0 0 0 ;
-        z-index: 2;
-    }
-    .ss3-2-2{
-        position: relative;
-        width: 100%;
-        height: 25%;
-        background: url('img/AI_pic.png') no-repeat center;
-        margin: 15px 0 0 0 ;
-        z-index: 2;
-    }
-    .ss3-3-3{
-        position: relative;
-        width: 100%;
-        height: 25%;
-        background: url('img/frame.png') no-repeat center;
-        margin: 15px 0 0 0 ;
-        z-index: 2;
-    }
-    .ss3-4-4{
-        position: relative;
-        width: 100%;
-        height: 25%;
-        background: url('img/report.png') no-repeat center;
-        background-size: 100% auto;
-        margin: 15px 0 0 0 ;
-        z-index: 2;
-    }
-    .ss3-1-1 .text-1,
-    .ss3-2-2 .text-1, 
-    .ss3-3-3 .text-1,
-    .ss3-4-4 .text-1{
-        width: auto;
-        height: 100%;
         position:relative;
-        background-color: white;
-        margin: 10px 70px 0 100px;
+        background-color: rgba(255, 255, 255, 0.589);
+        margin: 15px 0 0 0 ;
+        padding: 15px;
+        border-radius: 50px;
+    }
+    .ss3-2-2 .text-1{
+        width: 100%;
+        height: 25%;
+        position:relative;
+        background-color: rgba(255, 255, 255, 0.589);
+        margin: 15px 0 0 0 ;
+        padding: 15px;
+        border-radius: 50px;
+    }
+    .ss3-3-3 .text-1{
+        width: 100%;
+        height: 25%;
+        position:relative;
+        background-color: rgba(255, 255, 255, 0.589);
+        margin: 15px 0 0 0 ;
+        padding: 15px;
+        border-radius: 50px;
+    }
+    .ss3-4-4 .text-1{
+        width: 100%;
+        height: 25%;
+        position:relative;
+        background-color: rgba(255, 255, 255, 0.589);
+        margin: 15px 0 0 0 ;
+        padding: 15px;
+        border-radius: 50px;
     }
     .text-1 h2 {
-        font-size: 28px;
+        font-size: 30px;
         font-weight: 600;
-        margin: 100px 0 15px 15px;
     }
     .text-1 li {
         position: relative;
         font-size: 26px;
         margin-left: 50px;
-        line-height: 50px;
+        line-height: 40px;
         font-weight: 500;
     }
     
@@ -505,6 +557,18 @@ footer {
         text-decoration: underline;
     }
     /* profile-section 樣式 */
+    .P-title {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin:90px 0 10px 0;
+    }
+    .P-title h1 {
+        text-align: center;
+        font-size: 62px;
+        margin: 5px 0 5px 0;
+        text-shadow:12px 12px 15px rgba(0, 0, 0, 0.4) ;
+    }
     .s4 {
         height: auto;
         margin: 8px 10px 8px 10px;
@@ -584,6 +648,18 @@ footer {
         font-size: 16px;
     }
     /* about-section 樣式 */
+    .A-title {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin:90px 0 10px 0;
+    }
+    .A-title h1 {
+        text-align: center;
+        font-size: 62px;
+        margin: 5px 0 5px 0;
+        text-shadow:12px 12px 15px rgba(0, 0, 0, 0.4) ;
+    }
     .s5 {
         width: 100%;
         height: auto;
@@ -622,7 +698,7 @@ footer {
 
 }
 
-/* 當視窗縮小時 (max-width: 1600px)*/
+/* 當視窗縮小時 (max-width: 450px)*/
 @media (max-width: 450px) {
     /* 導航列樣式 */
     .menu-icon {
@@ -643,100 +719,101 @@ footer {
     .nav-links.active {
         display: flex;
     }
+    .titleline {
+        width: auto;
+    }
 
     .ss1 {
         width: 100%;
+        height: auto;
+        border-radius: 100px;
     }
     .ss1 h1 {
         text-align: center;
-        font-size: 30px;
+        font-size: 42px;
         margin:160px 0 0 42px;
     }
     .ss1 p{
         text-align: center;
-        font-size: 16px;
+        font-size: 25px;
         margin: 50px 0 0 32px;
     }
     .ss2 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 30%;
-        height: 100%;
         display: none;
     }
     .ss2 img{
-        width: 100px;
-        height: 100px;
-        display: none;
-    }
-    .s3 {
         display: none;
     }
     /* skill-section-2 樣式 */
+    .s3 {
+        display: none;
+    }
+    .S-title {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin:90px 0 10px 0;
+    }
+    .S-title h1 {
+        text-align: center;
+        font-size: 46px;
+        margin: 5px 0 5px 0;
+        text-shadow:12px 12px 15px rgba(0, 0, 0, 0.4) ;
+    }
     .s3-1 {
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        margin:200px 0 100px 0;
+        margin:10px 0 100px 0;
         overflow: hidden;
     }
-    .ss3-1-1{
-        position: relative;
+    .ss3-1-1 .text-1{
         width: 100%;
         height: 25%;
-        background: url('img/program.png') no-repeat center;
-        margin: 10px 0 0 0 ;
-        z-index: 2;
-    }
-    .ss3-2-2{
-        position: relative;
-        width: 100%;
-        height: 25%;
-        background: url('img/AI_pic.png') no-repeat center;
-        margin: 10px 0 0 0 ;
-        z-index: 2;
-    }
-    .ss3-3-3{
-        position: relative;
-        width: 100%;
-        height: 25%;
-        background: url('img/frame.png') no-repeat center;
-        margin: 10px 0 0 0 ;
-        z-index: 2;
-    }
-    .ss3-4-4{
-        position: relative;
-        width: 100%;
-        height: 25%;
-        background: url('img/report.png') no-repeat center;
-        background-size: 100% auto;
-        margin: 10px 0 0 0 ;
-        z-index: 2;
-    }
-    .ss3-1-1 .text-1,
-    .ss3-2-2 .text-1, 
-    .ss3-3-3 .text-1,
-    .ss3-4-4 .text-1{
-        width: auto;
-        height: 100%;
         position:relative;
-        background-color: white;
-        margin: 10px 90px 0 80px;
+        background-color: rgba(255, 255, 255, 0.589);
+        margin: 15px 0 0 0 ;
+        padding: 15px;
+        border-radius: 20px;
+    }
+    .ss3-2-2 .text-1{
+        width: 100%;
+        height: 25%;
+        position:relative;
+        background-color: rgba(255, 255, 255, 0.589);
+        margin: 15px 0 0 0 ;
+        padding: 15px;
+        border-radius: 20px;
+    }
+    .ss3-3-3 .text-1{
+        width: 100%;
+        height: 25%;
+        position:relative;
+        background-color: rgba(255, 255, 255, 0.589);
+        margin: 15px 0 0 0 ;
+        padding: 15px;
+        border-radius: 20px;
+    }
+    .ss3-4-4 .text-1{
+        width: 100%;
+        height: 25%;
+        position:relative;
+        background-color: rgba(255, 255, 255, 0.589);
+        margin: 15px 0 0 0 ;
+        padding: 15px;
+        border-radius: 20px;
     }
     .text-1 h2 {
-        font-size: 18px;
+        font-size: 30px;
         font-weight: 600;
-        margin: 50px 0 15px 15px;
-        padding-top: 8px;
     }
     .text-1 li {
         position: relative;
-        font-size: 14px;
+        font-size: 26px;
         margin-left: 50px;
-        line-height: 50px;
+        line-height: 40px;
         font-weight: 500;
     }
     
@@ -750,6 +827,17 @@ footer {
         text-decoration: underline;
     }
     /* profile-section 樣式 */
+    .P-title {
+        width: 100%;
+        height: auto;
+        margin:90px 0 10px 0;
+    }
+    .P-title h1 {
+        text-align: center;
+        font-size: 46px;
+        margin: 5px 0 5px 0;
+        text-shadow:12px 12px 15px rgba(0, 0, 0, 0.4) ;
+    }
     .s4 {
         height: auto;
         margin: 8px 10px 8px 10px;
@@ -815,7 +903,7 @@ footer {
         position: relative;
         height: 45%;
         background-color: #ebebeb;
-        margin-top: 40px;
+        margin-top: 20px;
         padding: 20px 0 0 15px;
         line-height: 30px;
         word-wrap: normal;
@@ -829,6 +917,17 @@ footer {
         font-size: 16px;
     }
     /* about-section 樣式 */
+    .A-title {
+        width: 100%;
+        height: auto;
+        margin:90px 0 10px 0;
+    }
+    .A-title h1 {
+        text-align: center;
+        font-size: 46px;
+        margin: 5px 0 5px 0;
+        text-shadow:12px 12px 15px rgba(0, 0, 0, 0.4) ;
+    }
     .s5 {
         width: 100%;
         height: auto;
